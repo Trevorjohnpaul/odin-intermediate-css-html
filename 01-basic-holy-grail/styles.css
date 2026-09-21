@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    color: white;
+}
+.container {
+    display: grid;
+    /* Grid column sidebar takes 250px the other content 
+    takes the rem fraction */
+    grid-template-columns:250px 1fr;
+    /* Grid row header takes 50px, footer takes 50px, and the remaining space is divided between the sidebar and the main content */
+    /* grid-template-rows: auto auto auto auto; */
+    grid-template-areas: 
+        "header header"
+        "sidebar nav"
+        "sidebar article"
+        "footer footer";
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+     border-radius: 10px;
+}
+.header{
+    grid-area: header;
+    background-color: green;
+    text-align: center;
+    font-size:25px;
+     border-radius: 10px;
+}
+.sidebar{
+    grid-area: sidebar;
+    font-size:25px;
+   background-color: rgba(0, 0, 255, 0.675);
+   text-align: center;
+    border-radius: 10px;
+}
+.nav{
+    grid-area: nav;
+    font-size:25px;
+   background-color: rgba(255, 166, 0, 0.589);
+   text-align: center;
+    border-radius: 10px;
+}
+.article{
+    grid-area: article;
+    font-size:20px;
+  background-color: rgba(128, 0, 128, 0.671);
+  text-align: center;
+  Align-items: center;
+  justify-content: center;
+   border-radius: 10px;
+}
+.article p{
+    padding: 10px;
+    font-size: 15px;
+     text-align: left;
+}
+.footer{
+    grid-area: footer;
+    font-size:25px;
+ background-color: rgba(54, 53, 53, 0.89);
+ text-align: center;
+  border-radius: 10px;
+}
